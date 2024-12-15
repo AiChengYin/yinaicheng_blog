@@ -1,0 +1,41 @@
+# Spring介绍
+
+## Spring概述
+
+Spring是于2003年开始兴起的一个轻量级的Java开发框架，它是为了解决企业应用开发的复杂性而创建的。
+Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。
+当然，Spring的用途不仅只限于服务器端的开发，因为它是一个轻量级的控制反转（IOC）和面向切面（AOP）的容器框架，从简单性、可测试性和松耦合的角度而言，任何Java应用都可以从Spring中受益。
+
+## Spring优势
+
+> 方便解耦，简化开发
+
+* Spring就是一个大工厂，专门负责生成Bean，可以将所有对象创建和依赖关系维护由Spring管理。
+
+> AOP编程的支持
+
+* Spring提供面向切面编程，可以方便的实现对程序进行权限拦截、运行监控等功能。
+
+> 声明式事务的支持
+
+* 只需要通过配置就可以完成对事务的管理，而无需手动编程。
+
+> 方便程序的测试
+
+* Spring对Junit4支持，可以通过注解方便的测试Spring程序。
+
+> 方便集成各种优秀框架
+
+* Spring不排斥各种优秀的开源框架，其内部提供了对各种优秀框架（如：Struts、Hibernate、MyBatis、Quartz等）的支持。
+
+> 降低JavaEE API的使用难度
+
+Spring对JavaEE开发中一些难用的API（JDBC、JavaMail、远程调用、webservice等）都提供了封装，使这些API应用难度大大降低。
+
+## Sping体系结构
+
+Spring框架是一个分层架构，它包含一系列的功能要素并被分为大约20个模块。
+这些模块分为Core Container、Data Access/Integration、Web、AOP（Aspect Oriented Programming)、Instrumentation和测试部分。
+
+![](./photo/spring-overview.png)
+

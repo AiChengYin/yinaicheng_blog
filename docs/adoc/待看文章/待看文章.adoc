@@ -1,0 +1,28 @@
+= 待看文章
+
+== 前端
+
+* https://juejin.cn/post/7057464418614902815[移动前端性能优化最佳实践：采用新一代格式WebP提供图片]
+
+* https://blog.csdn.net/weixin_41901270/article/details/90082825[pdf.js 流文件展示,禁止下载,限制用户查看页数，保存阅读进度]
+
+* https://blog.csdn.net/sunzhen15896/article/details/111991504[antd tab切换刷新tab内组件的方法]
+
+* http://doc.hz.netease.com/pages/viewpage.action?pageId=170927704[vue.js组件精讲]
+
+== 后端
+
+* https://developer.aliyun.com/article/1005003[关于SpringBoot在MultipartFile上踩过的坑]
+
+* https://aijishu.com/a/1060000000021330[绝对干货：利用redisson完成分布式锁功能]
+
+* https://www.jianshu.com/p/c54c96b1fb5a[java问题定位思路总结]
+
+* https://www.jianshu.com/p/43f75210b7e5[kafka之网络模型总结]
+
+* https://kms.netease.com/article/86601[数据平台建设浅谈]
+
+== 运维
+
+* https://blog.csdn.net/weixin_42500169/article/details/131578187[Docker部署的jenkins和gitlab内存优化]
+

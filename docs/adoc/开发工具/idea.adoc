@@ -1,0 +1,19 @@
+= idea
+
+idea配置避免建立索引的目录
+
+比如希望node_modules不被idea构建索引，可以这样配置：
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+<component name="NewModuleRootManager" inherit-compiler-output="true">
+<exclude-output />
+<content url="file://$MODULE_DIR$">
+<excludeFolder url="file://$MODULE_DIR$/node_modules" />
+</content>
+<orderEntry type="inheritedJdk" />
+<orderEntry type="sourceFolder" forTests="false" />
+</component>
+</module>
+----
