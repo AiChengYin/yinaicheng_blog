@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>第十一课 | 印爱成的IT技术分享</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/yinaicheng_blog/myWebStie.ico">
+    <script charset="utf-8" async="async" src="/yinaicheng_blog/js/jquery.min.js"></script>
+    <script charset="utf-8" async="async" src="/yinaicheng_blog/js/global.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="算法、并发编程、分布式、中间件、关系型数据库、云原生...">
+    <meta name="robots" content="all">
+    <meta name="author" content="印爱成">
+    <meta name="title" content="IT技术分享">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="keywords" content="算法、并发编程、分布式、中间件、关系型数据库、云原生...">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <link rel="preload" href="/yinaicheng_blog/assets/css/0.styles.1a44adbb.css" as="style"><link rel="preload" href="/yinaicheng_blog/assets/js/app.c8385196.js" as="script"><link rel="preload" href="/yinaicheng_blog/assets/js/4.c33a3b26.js" as="script"><link rel="preload" href="/yinaicheng_blog/assets/js/55.1777a558.js" as="script"><link rel="preload" href="/yinaicheng_blog/assets/js/1.b8e9924f.js" as="script"><link rel="prefetch" href="/yinaicheng_blog/assets/js/100.698b6044.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/101.ce0f95d1.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/102.f7737a56.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/103.20458e32.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/104.124f3ee5.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/105.19b805b8.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/106.71048f8a.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/107.d847de2f.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/108.82227fe8.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/109.9ff7e582.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/11.3a81aeb8.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/110.abca328a.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/111.002b4e19.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/112.392ff8b1.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/113.66370992.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/114.fa66c844.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/115.bbd167f2.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/116.68990abb.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/117.98704a54.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/118.0c2819ea.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/119.3361fc43.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/12.aabcaa4f.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/120.9b6d62a1.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/121.533998af.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/122.66b9fcdd.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/123.70539a59.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/124.4429b3b3.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/125.75653fa3.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/126.3e9d0061.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/127.aa584613.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/128.4a3e274d.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/129.b934470d.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/13.a5232047.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/130.558bbef6.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/131.797b9095.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/132.6cce78db.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/133.92fb1682.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/134.5f4cf4b1.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/135.c6c696d2.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/136.68b9867e.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/137.02c5619b.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/138.c2ecf86a.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/139.2e530b96.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/14.809860d0.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/140.923cdb4d.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/141.7af448b1.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/142.576a86bf.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/143.d6be9026.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/144.b8f9f604.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/145.9117f9e9.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/146.893396f6.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/147.7c43ca25.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/148.c81f2263.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/149.0e4b8178.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/15.7a152a95.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/150.f7b6e1cc.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/151.6ae0d23f.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/152.82ff21f9.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/153.6b7bd11a.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/154.d464c85c.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/155.1365c296.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/156.c7cb31ec.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/157.b64be50e.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/158.f3b90508.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/159.c9c1ba15.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/16.192fe3ac.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/17.6d6d155c.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/18.a2523df7.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/19.8b164ce5.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/2.48cf2882.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/20.b184821e.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/21.b4c51c47.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/22.09d0fc5c.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/23.70786ccd.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/24.ad255c4b.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/25.c6980613.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/26.d42821b7.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/27.f6112260.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/28.47a5c21a.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/29.37845589.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/3.94b3b97e.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/30.3688a806.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/31.a5fe8dde.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/32.4b00f4e8.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/33.fcf3a60e.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/34.89b6df5f.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/35.759e852d.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/36.9cd5e2be.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/37.fae40d07.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/38.db0a354d.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/39.60a098dc.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/40.6c15b5ab.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/41.09247e91.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/42.6bf03461.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/43.6cb676cf.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/44.e8499231.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/45.e77b4d0b.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/46.83d21442.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/47.eaf5ded7.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/48.e58715f3.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/49.db1102c4.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/5.218f2194.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/50.0a8fec07.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/51.8b94e084.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/52.fbe2d6f9.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/53.c4cd5285.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/54.c09df73c.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/56.c7915b63.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/57.94b02183.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/58.f3e81754.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/59.b6d692e4.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/6.dcbb2863.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/60.de534543.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/61.1288cb0a.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/62.f22eab36.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/63.9941ebc4.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/64.edfb9ae3.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/65.1e14c142.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/66.ad70cda4.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/67.6de65877.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/68.a8634f18.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/69.0d707d00.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/7.fb374b60.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/70.503e6b1f.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/71.4974cb4b.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/72.5bfb8d57.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/73.a776ef54.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/74.be5ef50a.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/75.697cd24c.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/76.adbfbd1c.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/77.f6632d53.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/78.41f69678.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/79.d0c4c99c.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/8.02b43e59.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/80.9018f0da.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/81.99abbe99.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/82.59f431ea.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/83.d0609efa.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/84.96a0197e.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/85.f2ac65a7.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/86.10179d2f.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/87.af942da4.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/88.012f9f26.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/89.8773a9b8.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/90.699be0fc.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/91.80b33665.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/92.01609370.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/93.339a7c93.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/94.f7a40213.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/95.c1160c5a.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/96.943a0da5.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/97.77497730.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/98.80e4a99f.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/99.569b8333.js"><link rel="prefetch" href="/yinaicheng_blog/assets/js/vendors~docsearch.0cd6ad32.js">
+    <link rel="stylesheet" href="/yinaicheng_blog/assets/css/0.styles.1a44adbb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/yinaicheng_blog/" class="home-link router-link-active"><!----> <span class="site-name">印爱成的IT技术分享</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法与数据结构" class="dropdown-title"><span class="title">算法与数据结构</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/算法与数据结构/算法/1.算法概述.html" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/算法与数据结构/数据结构/1.数据结构概述.html" class="nav-link">
+  数据结构
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分布式消息中间件" class="dropdown-title"><span class="title">分布式消息中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/分布式消息中间件/ActiveMQ/1.JMS概述.html" class="nav-link">
+  ActiveMQ
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="负载均衡中间件" class="dropdown-title"><span class="title">负载均衡中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/负载均衡中间件/Nginx/1.Nginx负载均衡.html" class="nav-link">
+  Nginx
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分布式文件存储" class="dropdown-title"><span class="title">分布式文件存储</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/分布式文件存储/MinIO/1.介绍.html" class="nav-link">
+  MinIO
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关系型数据库" class="dropdown-title"><span class="title">关系型数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/关系型数据库/Mysql/1.MySQL简介.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="多线程并发编程" class="dropdown-title"><span class="title">多线程并发编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/多线程并发编程/Java基础/1.Java程序运行原理分析.html" class="nav-link">
+  Java基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="高并发网络编程" class="dropdown-title"><span class="title">高并发网络编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/高并发网络编程/Java网络编程/1.TCP_UDP协议.html" class="nav-link">
+  Java网络编程
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/框架/Spring框架/Spring介绍.html" class="nav-link">
+  Spring
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="代码版本控制" class="dropdown-title"><span class="title">代码版本控制</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/代码版本控制/Git/1.Git版本控制入门.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/代码版本控制/JitPack/JitPack.html" class="nav-link">
+  JitPack
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/前端/准备工作/使用nvm管理不同版本的 node与npm.html" class="nav-link">
+  准备工作
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/前端/前后端分离与工程化/前后端分离与工程化.html" class="nav-link">
+  前后端分离与工程化
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/前端/前端性能优化/前端性能优化.html" class="nav-link">
+  前端性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/前端/基础前端技术/基础前端技术.html" class="nav-link">
+  基础前端技术
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/前端/框架和工具/框架和工具.html" class="nav-link">
+  框架和工具
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/前端/浏览器兼容性与安全性/浏览器兼容性与安全性.html" class="nav-link">
+  浏览器兼容性与安全性
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/后端/Java开发经验/Java开发经验.html" class="nav-link">
+  Java开发经验
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/后端/框架和工具链/框架和工具链.html" class="nav-link">
+  框架和工具链
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/后端/关系型数据库/关系型数据库.html" class="nav-link">
+  关系型数据库
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/后端/NoSQL数据库/NoSQL数据库.html" class="nav-link">
+  NoSQL数据库
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/后端/RESTful的API/RESTful的API.html" class="nav-link">
+  RESTful的API
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/后端/分布式系统及微服务架构/分布式系统及微服务架构.html" class="nav-link">
+  分布式系统及微服务架构
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/后端/消息队列系统/消息队列系统.html" class="nav-link">
+  消息队列系统
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="面试" class="dropdown-title"><span class="title">面试</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/面试/华为/机考/注意事项.html" class="nav-link">
+  华为
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/Linux/Centos/常用操作/常用操作.html" class="nav-link">
+  Centos
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/Linux/Ubuntu/常用操作/常用操作.html" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AI" class="dropdown-title"><span class="title">AI</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/AI/ChatGPT/ChatGPT使用.html" class="nav-link">
+  ChatGPT
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="外语" class="dropdown-title"><span class="title">外语</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/外语/日语/新标日初级/1.第一课.html" class="nav-link">
+  新标日初级
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/外语/日语/日语学习语法全掌握/1.名词谓语句.html" class="nav-link">
+  日语学习语法全掌握
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/外语/日语/TRYN2语法必备/1.名词+につき.html" class="nav-link">
+  TRYN2语法必备
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法与数据结构" class="dropdown-title"><span class="title">算法与数据结构</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/算法与数据结构/算法/1.算法概述.html" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/算法与数据结构/数据结构/1.数据结构概述.html" class="nav-link">
+  数据结构
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分布式消息中间件" class="dropdown-title"><span class="title">分布式消息中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/分布式消息中间件/ActiveMQ/1.JMS概述.html" class="nav-link">
+  ActiveMQ
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="负载均衡中间件" class="dropdown-title"><span class="title">负载均衡中间件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/负载均衡中间件/Nginx/1.Nginx负载均衡.html" class="nav-link">
+  Nginx
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分布式文件存储" class="dropdown-title"><span class="title">分布式文件存储</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/分布式文件存储/MinIO/1.介绍.html" class="nav-link">
+  MinIO
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关系型数据库" class="dropdown-title"><span class="title">关系型数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/关系型数据库/Mysql/1.MySQL简介.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="多线程并发编程" class="dropdown-title"><span class="title">多线程并发编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/多线程并发编程/Java基础/1.Java程序运行原理分析.html" class="nav-link">
+  Java基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="高并发网络编程" class="dropdown-title"><span class="title">高并发网络编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/高并发网络编程/Java网络编程/1.TCP_UDP协议.html" class="nav-link">
+  Java网络编程
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/框架/Spring框架/Spring介绍.html" class="nav-link">
+  Spring
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="代码版本控制" class="dropdown-title"><span class="title">代码版本控制</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/代码版本控制/Git/1.Git版本控制入门.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/代码版本控制/JitPack/JitPack.html" class="nav-link">
+  JitPack
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/前端/准备工作/使用nvm管理不同版本的 node与npm.html" class="nav-link">
+  准备工作
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/前端/前后端分离与工程化/前后端分离与工程化.html" class="nav-link">
+  前后端分离与工程化
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/前端/前端性能优化/前端性能优化.html" class="nav-link">
+  前端性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/前端/基础前端技术/基础前端技术.html" class="nav-link">
+  基础前端技术
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/前端/框架和工具/框架和工具.html" class="nav-link">
+  框架和工具
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/前端/浏览器兼容性与安全性/浏览器兼容性与安全性.html" class="nav-link">
+  浏览器兼容性与安全性
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/后端/Java开发经验/Java开发经验.html" class="nav-link">
+  Java开发经验
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/后端/框架和工具链/框架和工具链.html" class="nav-link">
+  框架和工具链
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/后端/关系型数据库/关系型数据库.html" class="nav-link">
+  关系型数据库
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/后端/NoSQL数据库/NoSQL数据库.html" class="nav-link">
+  NoSQL数据库
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/后端/RESTful的API/RESTful的API.html" class="nav-link">
+  RESTful的API
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/后端/分布式系统及微服务架构/分布式系统及微服务架构.html" class="nav-link">
+  分布式系统及微服务架构
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/后端/消息队列系统/消息队列系统.html" class="nav-link">
+  消息队列系统
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="面试" class="dropdown-title"><span class="title">面试</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/面试/华为/机考/注意事项.html" class="nav-link">
+  华为
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><span class="title">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/Linux/Centos/常用操作/常用操作.html" class="nav-link">
+  Centos
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/Linux/Ubuntu/常用操作/常用操作.html" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AI" class="dropdown-title"><span class="title">AI</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/AI/ChatGPT/ChatGPT使用.html" class="nav-link">
+  ChatGPT
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="外语" class="dropdown-title"><span class="title">外语</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/外语/日语/新标日初级/1.第一课.html" class="nav-link">
+  新标日初级
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/外语/日语/日语学习语法全掌握/1.名词谓语句.html" class="nav-link">
+  日语学习语法全掌握
+</a></li><li class="dropdown-item"><!----> <a href="/yinaicheng_blog/md/外语/日语/TRYN2语法必备/1.名词+につき.html" class="nav-link">
+  TRYN2语法必备
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>日语新标日初级</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/1.第一课.html" class="sidebar-link">第一课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/2.第二课.html" class="sidebar-link">第二课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/3.第三课.html" class="sidebar-link">第三课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/4.第四课.html" class="sidebar-link">第四课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/5.第五课.html" class="sidebar-link">第五课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/6.第六课.html" class="sidebar-link">第六课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/7.第七课.html" class="sidebar-link">第七课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/8.第八课.html" class="sidebar-link">第八课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/9.第九课.html" class="sidebar-link">第九课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/10.第十课.html" class="sidebar-link">第十课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/11.第十一课.html" class="active sidebar-link">第十一课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/12.第十二课.html" class="sidebar-link">第十二课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/13.第十三课.html" class="sidebar-link">第十三课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/14.第十四课.html" class="sidebar-link">第十四课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/15.第十五课.html" class="sidebar-link">第十五课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/16.第十六课.html" class="sidebar-link">第十六课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/17.第十七课.html" class="sidebar-link">第十七课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/18.第十八课.html" class="sidebar-link">第十八课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/19.第十九课.html" class="sidebar-link">第十九课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/20.第二十课.html" class="sidebar-link">第二十课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/21.第二十一课.html" class="sidebar-link">第二十一课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/22.第二十二课.html" class="sidebar-link">第二十二课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/23.第二十三课.html" class="sidebar-link">第二十三课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/24.第二十四课.html" class="sidebar-link">第二十四课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/25.第二十五课.html" class="sidebar-link">第二十五课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/26.第二十六课.html" class="sidebar-link">第二十六课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/27.第二十七课.html" class="sidebar-link">第二十七课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/28.第二十八课.html" class="sidebar-link">第二十八课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/29.第二十九课.html" class="sidebar-link">第二十九课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/30.第三十课.html" class="sidebar-link">第三十课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/31.第三十一课.html" class="sidebar-link">第三十一课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/32.第三十二课.html" class="sidebar-link">第三十二课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/33.第三十三课.html" class="sidebar-link">第三十三课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/34.第三十四课.html" class="sidebar-link">第三十四课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/35.第三十五课.html" class="sidebar-link">第三十五课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/36.第三十六课.html" class="sidebar-link">第三十六课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/37.第三十七课.html" class="sidebar-link">第三十七课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/38.第三十八课.html" class="sidebar-link">第三十八课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/39.第三十九课.html" class="sidebar-link">第三十九课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/40.第四十课.html" class="sidebar-link">第四十课</a></li><li><a href="/yinaicheng_blog/md/外语/日语/新标日初级/单词汇总.html" class="sidebar-link">单词汇总</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>日语学习语法全掌握</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/yinaicheng_blog/md/外语/日语/日语学习语法全掌握/1.名词谓语句.html" class="sidebar-link">名词谓语句</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>TRYN2语法必备</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/yinaicheng_blog/md/外语/日语/TRYN2语法必备/1.名词+につき.html" class="sidebar-link">名词+につき</a></li></ul></section></li></ul> </aside> <div><main class="page"> <div class="theme-default-content content__default"><h1 id="第十一课"><a href="#第十一课" class="header-anchor">#</a> 第十一课</h1> <h2 id="基本课文"><a href="#基本课文" class="header-anchor">#</a> 基本课文</h2> <div class="language-log line-numbers-mode"><pre class="language-log"><code>小野さんは　歌が　好きです。
+
+スミスさんは　韓国語が　わかります。
+
+吉田さんは　時々　中国や　韓国へ　行きます。
+
+森さんは　お酒が　好きですから、毎日　飲みます。
+
+吉田さんは　料理が　できますか。
+いいえ、ぜんぜん　できません。
+
+どんな　音楽が　好きですか。
+ロックや　ポップスなどが　好きです。
+
+長島さん、スペイン語が　わかりますか。
+ええ、大学で　習いましたから、少し　わかります。
+
+小野さん、よく　音楽を　聞きますか。
+ええ、家で　CDを　よく　聞きます。
+そして、たまに　コンサートへ　行きます。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h2 id="语法解释"><a href="#语法解释" class="header-anchor">#</a> 语法解释</h2> <p><img alt="" data-src="/yinaicheng_blog/assets/img/11_1.91c0c0b2.png" loading="lazy" class="lazy"></p> <blockquote><p>名1は 名2が 一类形/二类形 です</p></blockquote> <p>&quot;好きです&quot;、&quot;嫌いです&quot;、&quot;怖いです&quot;等表达情感的形容词可以以&quot;[名词1]は　[名词2]が　[一类形容词/二类形容词]　です&quot;的句型使用。&quot;名词1&quot;表示情感的主体，&quot;名词2&quot;表示情感的对像。</p> <div class="language-log line-numbers-mode"><pre class="language-log"><code>小野さんは　歌　が　好きです。
+
+王さんは　肉　が　嫌いです。
+
+林さんは　犬　が　怖いです。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><blockquote><p>名1は 名2 が 分かります/できます</p></blockquote> <p>&quot;分かります&quot;、&quot;できます&quot;、&quot;上手です&quot;、&quot;下手です&quot;、&quot;苦手です&quot;等有关能力的词语也可以以&quot;[名词1]は　[名词2]　が　[动词]ます/ [一类形容词/二类形容词]　です&quot;的句型使用。</p> <div class="language-log line-numbers-mode"><pre class="language-log"><code>スミスさんは　韓国語　が　分かります。
+  
+わたしは　コンピュータ　が　できません。
+  
+小野さんは　料理　が　上手です。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><blockquote><p>名 や 名</p></blockquote> <p>第4课我们学习了相当于汉语&quot;和&quot;、&quot;跟&quot;意义的助词&quot;と&quot;。助词&quot;や&quot;与&quot;と&quot;一样，也且于连接名词，两者的差异在于&quot;と&quot;用于列举所有的项目，而&quot;や&quot;用于只列举许多项目中的两项，相当于汉语的&quot;～呀～什么的&quot;。并且&quot;や&quot;常常和&quot;など&quot;呼应使用，构成&quot;や…など&quot;。</p> <div class="language-log line-numbers-mode"><pre class="language-log"><code>吉田さんは　時々　中国や　韓国へ　行きます。
+
+森さんは　サッカーや　野球が　好きです。
+
+わたしは　お店で　野菜や　果物などを　買いました。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><blockquote><p>&quot;～から&quot;和&quot;だから&quot;[原因、理由]</p></blockquote> <p>说明原因、理由时用助词&quot;から&quot;。&quot;から&quot;位于陈述原因、理由的小句的句尾。通常是在说明原因、理由之后再陈述结论，但有时也可以先陈述结论再说明原因、理由，不过无论是哪一种情况，&quot;から&quot;都须接在表示原因、理由小句的句尾。构成复句的句子我们称之为小句。</p> <p>&quot;だから&quot;是表示原因、理由的连词，意思相当于汉语的&quot;所以&quot;，其比较礼貌的说法是&quot;ですから&quot;。助词&quot;から&quot;构成表示原因、理由小句的一部分，而连词&quot;だから&quot;独立使用在结果的句子前面。</p> <div class="language-log line-numbers-mode"><pre class="language-log"><code>森さんは　お酒が　好きですから、毎日　飲みます。
+
+寒いですから、まどを　閉めます。
+
+窓を　閉めます。寒いですから。
+
+金さんは　やさいが　嫌いです。だから　あまり　野菜を　食べません。
+
+あしたは　休みです。ですから、こどもと　動物園へ　行きます。
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><blockquote><p>频率的副词</p></blockquote> <p>&quot;いつも&quot;、&quot;よく&quot;、&quot;時々&quot;、&quot;たまに&quot;、&quot;あまり&quot;、&quot;全然&quot;等是表示频率的副词。&quot;あまり&quot;、&quot;全然&quot;后面须接否定形式。</p> <div class="language-log line-numbers-mode"><pre class="language-log"><code>わたしは　たまに　コンサートへ　行きます。
+
+李さんは　時々　映画を　見ます。
+
+田中さんは　あまり　横浜へは　行きません。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><blockquote><p>どうしてですか</p></blockquote> <p>询问事由时使用&quot;どうしてですか&quot;，相当于汉语中&quot;为什么&quot;。回答时在谓语后面加&quot;から&quot;。</p> <p>我下个月还来这里。<br>
+为什么？<br>
+因为朋友要在这里举行结婚典礼。</p> <div class="language-log line-numbers-mode"><pre class="language-log"><code>僕は　来月　また　ここへ　来ますよ。
+どうしてですか。
+ここで　友達の　結婚式が　ありますから。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="表达及词语讲解"><a href="#表达及词语讲解" class="header-anchor">#</a> 表达及词语讲解</h2> <p><img alt="" data-src="/yinaicheng_blog/assets/img/11_2.5d80d214.png" loading="lazy" class="lazy"></p> <h2 id="应用课文"><a href="#应用课文" class="header-anchor">#</a> 应用课文</h2> <div class="language-log line-numbers-mode"><pre class="language-log"><code>お土産
+
+箱根は　ホテルや　旅館が　多いですね。
+
+そうですね。会社の　別荘も　たくさん　あります。
+
+長島さんや　小野さんも　よく　来ますか。
+
+ええ、車で　時々　来ます。
+
+わたしは　運転が　できませんから、いつも　電車です。
+
+ぼくは　来月　また　きますよ。
+
+どうしてですか。
+
+この　近くの　ホテルで　友達の　写真展が　ありますから。
+
+箱根の　お土産は　何が　いいですが。
+
+うーん、そうですね…，迷いますね。
+
+寄木細工は　いかがですか。とても　有名ですよ。
+
+きれいな　模様ですね。
+
+ええ。
+
+気に　いりましたか。
+
+はい、とても。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><h2 id="生词表"><a href="#生词表" class="header-anchor">#</a> 生词表</h2> <div class="language-log line-numbers-mode"><pre class="language-log"><code>うた
+
+カラオケ
+
+ロック
+
+ポップス
+
+クラシック
+
+ピアノ
+
+え
+
+えいご
+
+スペインご
+
+スポーツ
+
+すいえい
+
+ゴルフ
+
+うんてん
+
+のみもの
+
+おさけ
+
+にく
+
+やさい
+
+くだもの
+
+ヒマワリ
+
+バラ
+
+コンピュータ
+
+まど
+
+けっこんしき
+
+しゃしんてん
+
+りょかん
+
+べっそう
+
+よせぎざいく
+
+もよう
+
+がいこく
+
+かいぎ
+
+あし
+
+ぼく
+
+わかります
+
+まよいます
+
+できます
+
+しめます
+
+つかれます
+
+さんぽします
+
+こわい
+
+あかい
+
+いたい
+
+じょうず
+
+へた
+
+にがて
+
+ときどき
+
+よく
+
+たまに
+
+また
+
+どうして
+
+だから
+
+うーん
+
+けっこうです
+
+きにいります
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/yinaicheng_blog/md/外语/日语/新标日初级/10.第十课.html" class="prev">
+          第十课
+        </a></span> <span class="next"><a href="/yinaicheng_blog/md/外语/日语/新标日初级/12.第十二课.html">
+          第十二课
+        </a>
+        →
+      </span></p></div> </main></div> <aside class="page-sidebar"> <div class="page-side-toolbar"><div class="option-box-toc-fixed"><div class="toc-container-sidebar"><div class="pos-box"><div class="icon-arrow"></div> <div class="scroll-box" style="max-height:650px"><div style="font-weight:bold;text-align:center;">第十一课</div> <hr> <div class="toc-box"><ul class="toc-sidebar-links"><li><a href="/yinaicheng_blog/md/%E5%A4%96%E8%AF%AD/%E6%97%A5%E8%AF%AD/%E6%96%B0%E6%A0%87%E6%97%A5%E5%88%9D%E7%BA%A7/11.%E7%AC%AC%E5%8D%81%E4%B8%80%E8%AF%BE.html#基本课文" class="toc-sidebar-link">基本课文</a><ul class="toc-sidebar-sub-headers"></ul></li><li><a href="/yinaicheng_blog/md/%E5%A4%96%E8%AF%AD/%E6%97%A5%E8%AF%AD/%E6%96%B0%E6%A0%87%E6%97%A5%E5%88%9D%E7%BA%A7/11.%E7%AC%AC%E5%8D%81%E4%B8%80%E8%AF%BE.html#语法解释" class="toc-sidebar-link">语法解释</a><ul class="toc-sidebar-sub-headers"></ul></li><li><a href="/yinaicheng_blog/md/%E5%A4%96%E8%AF%AD/%E6%97%A5%E8%AF%AD/%E6%96%B0%E6%A0%87%E6%97%A5%E5%88%9D%E7%BA%A7/11.%E7%AC%AC%E5%8D%81%E4%B8%80%E8%AF%BE.html#表达及词语讲解" class="toc-sidebar-link">表达及词语讲解</a><ul class="toc-sidebar-sub-headers"></ul></li><li><a href="/yinaicheng_blog/md/%E5%A4%96%E8%AF%AD/%E6%97%A5%E8%AF%AD/%E6%96%B0%E6%A0%87%E6%97%A5%E5%88%9D%E7%BA%A7/11.%E7%AC%AC%E5%8D%81%E4%B8%80%E8%AF%BE.html#应用课文" class="toc-sidebar-link">应用课文</a><ul class="toc-sidebar-sub-headers"></ul></li><li><a href="/yinaicheng_blog/md/%E5%A4%96%E8%AF%AD/%E6%97%A5%E8%AF%AD/%E6%96%B0%E6%A0%87%E6%97%A5%E5%88%9D%E7%BA%A7/11.%E7%AC%AC%E5%8D%81%E4%B8%80%E8%AF%BE.html#生词表" class="toc-sidebar-link">生词表</a><ul class="toc-sidebar-sub-headers"></ul></li></ul></div></div></div></div></div> <div class="option-box-toc-over"><img src="/images/system/toc.png" class="nozoom"> <span class="show-txt">目录</span> <div class="toc-container"><div class="pos-box"><div class="icon-arrow"></div> <div class="scroll-box" style="max-height:550px"><div style="font-weight:bold;text-align:center;">第十一课</div> <hr> <div class="toc-box"><ul class="toc-sidebar-links"><li><a href="/yinaicheng_blog/md/%E5%A4%96%E8%AF%AD/%E6%97%A5%E8%AF%AD/%E6%96%B0%E6%A0%87%E6%97%A5%E5%88%9D%E7%BA%A7/11.%E7%AC%AC%E5%8D%81%E4%B8%80%E8%AF%BE.html#基本课文" class="toc-sidebar-link">基本课文</a><ul class="toc-sidebar-sub-headers"></ul></li><li><a href="/yinaicheng_blog/md/%E5%A4%96%E8%AF%AD/%E6%97%A5%E8%AF%AD/%E6%96%B0%E6%A0%87%E6%97%A5%E5%88%9D%E7%BA%A7/11.%E7%AC%AC%E5%8D%81%E4%B8%80%E8%AF%BE.html#语法解释" class="toc-sidebar-link">语法解释</a><ul class="toc-sidebar-sub-headers"></ul></li><li><a href="/yinaicheng_blog/md/%E5%A4%96%E8%AF%AD/%E6%97%A5%E8%AF%AD/%E6%96%B0%E6%A0%87%E6%97%A5%E5%88%9D%E7%BA%A7/11.%E7%AC%AC%E5%8D%81%E4%B8%80%E8%AF%BE.html#表达及词语讲解" class="toc-sidebar-link">表达及词语讲解</a><ul class="toc-sidebar-sub-headers"></ul></li><li><a href="/yinaicheng_blog/md/%E5%A4%96%E8%AF%AD/%E6%97%A5%E8%AF%AD/%E6%96%B0%E6%A0%87%E6%97%A5%E5%88%9D%E7%BA%A7/11.%E7%AC%AC%E5%8D%81%E4%B8%80%E8%AF%BE.html#应用课文" class="toc-sidebar-link">应用课文</a><ul class="toc-sidebar-sub-headers"></ul></li><li><a href="/yinaicheng_blog/md/%E5%A4%96%E8%AF%AD/%E6%97%A5%E8%AF%AD/%E6%96%B0%E6%A0%87%E6%97%A5%E5%88%9D%E7%BA%A7/11.%E7%AC%AC%E5%8D%81%E4%B8%80%E8%AF%BE.html#生词表" class="toc-sidebar-link">生词表</a><ul class="toc-sidebar-sub-headers"></ul></li></ul></div></div></div></div></div> <div class="option-box"><img src="/images/system/toggle.png" width="30px" class="nozoom"> <span class="show-txt">左栏</span></div> <div title="第十课" class="option-box" style="padding-left:2px;text-align:center;"><a href="/yinaicheng_blog/md/外语/日语/新标日初级/10.第十课.html"><img src="/images/system/pre2.png" width="30px" class="nozoom"> <span class="show-txt">上一篇</span></a></div> <div title="第十二课" class="option-box" style="padding-left:2px;text-align:center;"><a href="/yinaicheng_blog/md/外语/日语/新标日初级/12.第十二课.html"><img src="/images/system/next2.png" width="30px" class="nozoom"> <span class="show-txt">下一篇</span></a></div></div>  <!----> </aside></div><div class="global-ui"></div></div>
+    <script src="/yinaicheng_blog/assets/js/app.c8385196.js" defer></script><script src="/yinaicheng_blog/assets/js/4.c33a3b26.js" defer></script><script src="/yinaicheng_blog/assets/js/55.1777a558.js" defer></script><script src="/yinaicheng_blog/assets/js/1.b8e9924f.js" defer></script>
+  </body>
+</html>
