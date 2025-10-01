@@ -1,7 +1,7 @@
 module.exports = {
     port: "8080",
     dest: ".site",
-    base: "/",
+    base: "/yinaicheng_blog/",
     title: "IT技术分享",
     description: "IT技术分享",
     markdown: {
