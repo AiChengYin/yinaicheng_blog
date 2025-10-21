@@ -47,7 +47,15 @@ module.exports = {
                 src: '/js/global.js',
             }],
         ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css' }],
-        ['link', { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css" }]
+        ['link', { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css" }],
+        ['script',{},`
+            (function(){
+              if(location.href.indexOf('/yinaicheng_blog/project') > -1){
+                const target = 'https://aichengyin.github.io/yinaicheng_blog/md/プロジェクト紹介/上海咪啰信息科技有限公司/2.三叉戟（Trident）智能集運プラットフォーム.html';
+                location.href = encodeURI(target);
+              }
+            })();
+         `],
     ],
     plugins: [
         ['@vuepress/medium-zoom', {
@@ -69,24 +77,6 @@ module.exports = {
             backgroundColor: '#f0faf5', // 标签背景颜色
             selector: '.page .content__default h1' // ^v1.0.1 你要将此标签渲染挂载到哪个元素后面？默认是第一个 H1 标签后面；
         }],
-        ['@vuepress/plugin-pwa', {
-          serviceWorker: true,
-          updatePopup: {
-            message: "发现新内容可用",
-            buttonText: "刷新"
-          }
-        }],
-        ['vuepress-plugin-redirect', {
-          redirectors: [
-            {
-              base: '/',
-              alternative: '/md/プロジェクト紹介/上海咪啰信息科技有限公司/1.洋⼭四期⼤数据運営効率分析システム.html',
-              redirects: [
-                { from: '/project', to: '/md/プロジェクト紹介/上海咪啰信息科技有限公司/1.洋⼭四期⼤数据運営効率分析システム.html' },
-              ]
-            }
-          ]
-        }]
 
     ],
     themeConfig: {
