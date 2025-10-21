@@ -69,6 +69,24 @@ module.exports = {
             backgroundColor: '#f0faf5', // 标签背景颜色
             selector: '.page .content__default h1' // ^v1.0.1 你要将此标签渲染挂载到哪个元素后面？默认是第一个 H1 标签后面；
         }],
+        ['@vuepress/plugin-pwa', {
+          serviceWorker: true,
+          updatePopup: {
+            message: "发现新内容可用",
+            buttonText: "刷新"
+          }
+        }],
+        ['vuepress-plugin-redirect', {
+          redirectors: [
+            {
+              base: '/',
+              alternative: '/md/プロジェクト紹介/上海咪啰信息科技有限公司/1.洋⼭四期⼤数据運営効率分析システム.html',
+              redirects: [
+                { from: '/project', to: '/md/プロジェクト紹介/上海咪啰信息科技有限公司/1.洋⼭四期⼤数据運営効率分析システム.html' },
+              ]
+            }
+          ]
+        }]
 
     ],
     themeConfig: {
@@ -84,11 +102,11 @@ module.exports = {
                         items: [
                             {
                                 text: '算法',
-                                link: '/md/算法与数据结构/算法/1.算法概述.md'
+                                link: '/md/算法与データ構造/算法/1.算法概述.md'
                             },
                             {
                                 text: '数据结构',
-                                link: '/md/算法与数据结构/数据结构/1.数据结构概述.md'
+                                link: '/md/アルゴリズムとデータ構造/データ構造/1.データ構造概述.md'
                             },
                         ]
                     },
@@ -98,7 +116,7 @@ module.exports = {
                         items: [
                             {
                                 text: 'ActiveMQ',
-                                link: '/md/分布式消息中间件/ActiveMQ/1.JMS概述.md'
+                                link: '/md/分散メッセージミドルウェア/ActiveMQ/1.JMS概述.md'
                             },
                         ]
                     },
@@ -108,7 +126,7 @@ module.exports = {
                         items: [
                             {
                                 text: 'Nginx',
-                                link: '/md/负载均衡中间件/Nginx/1.Nginx负载均衡.md'
+                                link: '/md/ロードバランスミドルウェア/Nginx/1.Nginxロードバランス.md'
                             },
                         ]
                     },
@@ -118,7 +136,7 @@ module.exports = {
                         items: [
                             {
                                 text: 'MinIO',
-                                link: '/md/分布式文件存储/MinIO/1.介绍.md'
+                                link: '/md/分散ファイルストレージ/MinIO/1.介紹.md'
                             },
                         ]
                     },
@@ -129,7 +147,7 @@ module.exports = {
                         items: [
                             {
                                 text: 'MySQL',
-                                link: '/md/关系型数据库/Mysql/1.MySQL简介.md',
+                                link: '/md/リレーショナルデータベース/Mysql/1.MySQL简介.md',
                             },
                         ]
                     },
@@ -139,7 +157,7 @@ module.exports = {
                         items: [
                             {
                                 text: 'Java基础',
-                                link: '/md/多线程并发编程/Java基础/1.Java程序运行原理分析.md'
+                                link: '/md/マルチスレッド並行プログラミング/Java基礎/1.Javaプログラム実行原理分析.md'
                             },
                         ]
                     },
@@ -149,7 +167,7 @@ module.exports = {
                         items: [
                             {
                                 text: 'Java网络编程',
-                                link: '/md/高并发网络编程/Java网络编程/1.TCP_UDP协议.md'
+                                link: '/md/ハイコンカレンシーネットワークプログラミング/Javaネットワークプログラミング/1.TCP_UDPプロトコル.md'
                             },
                         ]
                     },
@@ -159,7 +177,7 @@ module.exports = {
                         items: [
                             {
                                 text: 'Spring',
-                                link: '/md/框架/Spring框架/Spring介绍.md'
+                                link: '/md/フレームワーク/Springフレームワーク/Spring介紹.md'
                             },
                         ]
                     },
@@ -169,11 +187,11 @@ module.exports = {
                         items: [
                             {
                                 text: 'Git',
-                                link: '/md/代码版本控制/Git/1.Git版本控制入门.md'
+                                link: '/md/コードバージョンコントロール/Git/1.Gitバージョンコントロール入門.md'
                             },
                             {
                                 text: 'JitPack',
-                                link: '/md/代码版本控制/JitPack/JitPack.md'
+                                link: '/md/コードバージョンコントロール/JitPack/JitPack.md'
                             },
                         ]
                     },
@@ -183,27 +201,27 @@ module.exports = {
                         items: [
                             {
                                 text: '准备工作',
-                                link: '/md/前端/准备工作/使用nvm管理不同版本的 node与npm.md'
+                                link: '/md/フロントエンド/準備作業/使用nvm管理異なるバージョンの nodeとnpm.md'
                             },
                             {
                                 text: '前后端分离与工程化',
-                                link: '/md/前端/前后端分离与工程化/前后端分离与工程化.md'
+                                link: '/md/フロントエンド/フロントエンドとバックエンドの分離とエンジニアリング/フロントエンドとバックエンドの分離とエンジニアリング.md'
                             },
                             {
                                 text: '前端性能优化',
-                                link: '/md/前端/前端性能优化/前端性能优化.md'
+                                link: '/md/フロントエンド/フロントエンドパフォーマンス最適化/フロントエンドパフォーマンス最適化.md'
                             },
                             {
                                 text: '基础前端技术',
-                                link: '/md/前端/基础前端技术/基础前端技术.md'
+                                link: '/md/フロントエンド/基本フロントエンド技術/基本フロントエンド技術.md'
                             },
                             {
-                                text: '框架和工具',
-                                link: '/md/前端/框架和工具/框架和工具.md'
+                                text: 'フレームワークとツール',
+                                link: '/md/フロントエンド/フレームワークとツール/フレームワークとツール.md'
                             },
                             {
-                                text: '浏览器兼容性与安全性',
-                                link: '/md/前端/浏览器兼容性与安全性/浏览器兼容性与安全性.md'
+                                text: 'ブラウザの互換性とセキュリティ',
+                                link: '/md/フロントエンド/ブラウザの互換性とセキュリティ/ブラウザの互換性とセキュリティ.md'
                             },
                         ]
                     },
@@ -212,32 +230,32 @@ module.exports = {
                         text: '后端',
                         items: [
                             {
-                                text: 'Java开发经验',
-                                link: '/md/后端/Java开发经验/Java开发经验.md'
+                                text: 'Java開発経験',
+                                link: '/md/バックエンド/Java開発経験/Java開発経験.md'
                             },
                             {
-                                text: '框架和工具链',
-                                link: '/md/后端/框架和工具链/框架和工具链.md'
+                                text: 'フレームワークとツールチェーン',
+                                link: '/md/バックエンド/フレームワークとツールチェーン/フレームワークとツールチェーン.md'
                             },
                             {
-                                text: '关系型数据库',
-                                link: '/md/后端/关系型数据库/关系型数据库.md'
+                                text: 'リレーショナルデータベース',
+                                link: '/md/バックエンド/リレーショナルデータベース/リレーショナルデータベース.md'
                             },
                             {
-                                text: 'NoSQL数据库',
-                                link: '/md/后端/NoSQL数据库/NoSQL数据库.md'
+                                text: 'NoSQLデータベース',
+                                link: '/md/バックエンド/NoSQLデータベース/NoSQLデータベース.md'
                             },
                             {
-                                text: 'RESTful的API',
-                                link: '/md/后端/RESTful的API/RESTful的API.md'
+                                text: 'RESTfulのAPI',
+                                link: '/md/バックエンド/RESTfulのAPI/RESTfulのAPI.md'
                             },
                             {
-                                text: '分布式系统及微服务架构',
-                                link: '/md/后端/分布式系统及微服务架构/分布式系统及微服务架构.md'
+                                text: '分散システムとマイクロサービスアーキテクチャ',
+                                link: '/md/バックエンド/分散システムとマイクロサービスアーキテクチャ/分散システムとマイクロサービスアーキテクチャ.md'
                             },
                             {
-                                text: '消息队列系统',
-                                link: '/md/后端/消息队列系统/消息队列系统.md'
+                                text: 'メッセージキューシステム',
+                                link: '/md/バックエンド/メッセージキューシステム/メッセージキューシステム.md'
                             },
                         ]
                     },
@@ -247,7 +265,7 @@ module.exports = {
                         items: [
                             {
                                 text: '华为',
-                                link: '/md/面试/华为/机考/注意事项.md'
+                                link: '/md/面接/华为/機考/注意事項.md'
                             },
                         ]
                     },
@@ -281,15 +299,15 @@ module.exports = {
                         items: [
                             {
                                 text: '新标日初级',
-                                link: '/md/外语/日语/新标日初级/1.第一课.md'
+                                link: '/md/外国語/日本語/新標日初级/1.第一課.md'
                             },
                             {
-                                text: '日语学习语法全掌握',
-                                link: '/md/外语/日语/日语学习语法全掌握/1.名词谓语句.md'
+                                text: '日語学習文法全マスター',
+                                link: '/md/外国語/日本語/日語学習文法全マスター/1.名詞述語句.md'
                             },
                             {
-                                text: 'TRYN2语法必备',
-                                link: '/md/外语/日语/TRYN2语法必备/1.名词+につき.md'
+                                text: 'TRYN2文法必須',
+                                link: '/md/外国語/日本語/TRYN2文法必須/1.名詞+につき.md'
                             },
                         ]
                     },
@@ -298,33 +316,33 @@ module.exports = {
                         text: 'プロジェクト紹介',
                         items: [
                             {
-                                text: '上海咪啰信息科技有限公司',
-                                link: '/md/プロジェクト紹介/上海咪啰信息科技有限公司/1.洋⼭四期⼤数据運営効率分析システム.md'
+                                text: '上海咪啰情報科技有限公司',
+                                link: '/md/プロジェクト紹介/上海咪啰情報科技有限公司/1.洋⼭四期⼤データ運営効率分析システム.md'
                             },
                             {
-                                text: '⽹易（杭州）⽹络有限公司',
-                                link: '/md/プロジェクト紹介/⽹易（杭州）⽹络有限公司/1.⽹易数帆（クラウド公共プラットフォーム）CMS∕ミニアプリ開発.md'
+                                text: '網易（杭州）ネットワーク有限公司',
+                                link: '/md/プロジェクト紹介/網易（杭州）ネットワーク有限公司/1.網易数帆（クラウド公共プラットフォーム）CMS∕ミニアプリ開発.md'
                             },
                         ]
                     },
 
                 ],
                 sidebar: {
-                    "/md/算法与数据结构/": getAlgorithmDataStructure(),
-                    "/md/分布式消息中间件/": getMessageQueue(),
-                    "/md/负载均衡中间件/": getLoadBalance(),
-                    "/md/分布式文件存储/": getFileStorage(),
-                    "/md/关系型数据库/": getRelationalDatabase(),
-                    "/md/面试/": getInterview(),
-                    "/md/多线程并发编程/": getMultithreadedConcurrentProgramme(),
-                    "/md/高并发网络编程/": getHighConcurrencyNetworkProgremme(),
-                    "/md/代码版本控制/": getCodeVersionControl(),
-                    "/md/框架/": getFrame(),
-                    "/md/前端/": getFrontEnd(),
-                    "/md/后端/": getBackEnd(),
+                    "/md/アルゴリズムとデータ構造/": getAlgorithmDataStructure(),
+                    "/md/分散メッセージミドルウェア/": getMessageQueue(),
+                    "/md/ロードバランスミドルウェア/": getLoadBalance(),
+                    "/md/分散ファイルストレージ/": getFileStorage(),
+                    "/md/リレーショナルデータベース/": getRelationalDatabase(),
+                    "/md/面接/": getInterview(),
+                    "/md/マルチスレッド並行プログラミング/": getMultithreadedConcurrentProgramme(),
+                    "/md/ハイコンカレンシーネットワークプログラミング/": getHighConcurrencyNetworkProgremme(),
+                    "/md/コードバージョンコントロール/": getCodeVersionControl(),
+                    "/md/フレームワーク/": getFrame(),
+                    "/md/フロントエンド/": getFrontEnd(),
+                    "/md/バックエンド/": getBackEnd(),
                     "/md/Linux/": getLinux(),
                     "/md/AI/": getAI(),
-                    "/md/外语/": getForeignLanguages(),
+                    "/md/外国語/": getForeignLanguages(),
                     "/md/プロジェクト紹介/": getJobProject(),
                 }
             }
@@ -335,26 +353,26 @@ module.exports = {
 function getAlgorithmDataStructure() {
     return [
         {
-            title: "算法",
+            title: "アルゴリズム",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "算法/1.算法概述.md",
-                "算法/2.线性查找法.md",
-                "算法/3.循环不变量.md",
-                "算法/4.复杂度分析.md",
-                "算法/5.测试算法性能.md",
-                "算法/6.选择排序法.md",
-                "算法/7.插入排序法.md",
+                "アルゴリズム/1.アルゴリズム概要.md",
+                "アルゴリズム/2.線形探索法.md",
+                "アルゴリズム/3.ループ不変量.md",
+                "アルゴリズム/4.複雑度分析.md",
+                "アルゴリズム/5.アルゴリズムパフォーマンステスト.md",
+                "アルゴリズム/6.選択ソート法.md",
+                "アルゴリズム/7.挿入ソート法.md",
             ]
         },
         {
-            title: "数据结构",
+            title: "データ構造",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "数据结构/1.数据结构概述.md",
-                "数据结构/2.数组.md",
+                "データ構造/1.データ構造概要.md",
+                "データ構造/2.配列.md",
             ]
         }
     ]
@@ -367,8 +385,8 @@ function getMessageQueue(){
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "ActiveMQ/1.JMS概述.md",
-                "ActiveMQ/2.ActiveMQ安装.md",
+                "ActiveMQ/1.JMS概要.md",
+                "ActiveMQ/2.ActiveMQインストール.md",
                 "ActiveMQ/3.ActiveMQ使用.md",
             ]
         }
@@ -382,7 +400,7 @@ function getLoadBalance(){
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "Nginx/1.Nginx负载均衡.md",
+                "Nginx/1.Nginxロードバランス.md",
             ]
         }
     ]
@@ -395,8 +413,8 @@ function getFileStorage(){
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "MinIO/1.介绍.md",
-                "MinIO/2.安装.md",
+                "MinIO/1.紹介.md",
+                "MinIO/2.インストール.md",
             ]
         }
     ]
@@ -405,21 +423,21 @@ function getFileStorage(){
 function getRelationalDatabase(){
     return [
         {
-            title: "关系型数据库",
+            title: "リレーショナルデータベース",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "Mysql/1.MySQL简介.md",
-                "Mysql/2.MySQL存储引擎.md",
-                "Mysql/3.MySQL索引.md",
-                "Mysql/4.MySQL锁.md",
-                "Mysql/5.MySQL事务.md",
-                "Mysql/6.MySQL日志.md",
-                "Mysql/7.MySQL Explain执行计划详解.md",
-                "Mysql/8.MySQL性能排查.md",
-                "Mysql/9.数据库设计规范.md",
-                "Mysql/10.常用的SQL语句.md",
-                "Mysql/11.其他.md",
+                "Mysql/1.MySQL紹介.md",
+                "Mysql/2.MySQLストレージエンジン.md",
+                "Mysql/3.MySQLインデックス.md",
+                "Mysql/4.MySQLロック.md",
+                "Mysql/5.MySQLトランザクション.md",
+                "Mysql/6.MySQLログ.md",
+                "Mysql/7.MySQL Explain実行計画詳細.md",
+                "Mysql/8.MySQLパフォーマンストラブルシューティング.md",
+                "Mysql/9.データベース設計規範.md",
+                "Mysql/10.一般的なSQL文.md",
+                "Mysql/11.その他.md",
             ]
         }
     ]
@@ -428,18 +446,18 @@ function getRelationalDatabase(){
 function getInterview() {
     return [
         {
-            title: "华为机考",
+            title: "华为機考",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "华为/机考/注意事项.md",
-                "华为/机考/勾股元数组.md",
-                "华为/机考/从两数组中取出k对元素并求和并计算和的最小值.md",
-                "华为/机考/N阶方阵里所有数的和.md",
-                "华为/机考/TLV编码解码信元.md",
-                "华为/机考/台阶跳跃方式统计.md",
-                "华为/机考/GPU最少执行完成任务时间.md",
-                "华为/机考/排序身高差.md",
+                "华为/機考/注意事項.md",
+                "华为/機考/勾股元配列.md",
+                "华为/機考/2つの配列からk対の要素を取り出し合計を計算し最小値を求める.md",
+                "华为/機考/N次の正方形行列内のすべての数の合計.md",
+                "华为/機考/TLVエンコーディングデコーディングシンボル.md",
+                "华为/機考/ステップジャンプ方法統計.md",
+                "华为/機考/GPUがタスクを完了する最小時間.md",
+                "华为/機考/身長の差のソート.md",
             ]
         }
     ]
@@ -448,13 +466,13 @@ function getInterview() {
 function getMultithreadedConcurrentProgramme() {
     return [
         {
-            title: "Java基础",
+            title: "Java基礎",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "Java基础/1.Java程序运行原理分析.md",
-                "Java基础/2.线程状态.md",
-                "Java基础/3.线程中止.md"
+                "Java基礎/1.Javaプログラム実行原理分析.md",
+                "Java基礎/2.スレッド状態.md",
+                "Java基礎/3.スレッド停止.md"
             ]
         }
     ]
@@ -463,12 +481,12 @@ function getMultithreadedConcurrentProgramme() {
 function getHighConcurrencyNetworkProgremme() {
     return [
         {
-            title: "Java网络编程",
+            title: "Javaネットワークプログラミング",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "Java网络编程/1.TCP_UDP协议.md",
-                "Java网络编程/2.HTTP协议.md",
+                "Javaネットワークプログラミング/1.TCP_UDPプロトコル.md",
+                "Javaネットワークプログラミング/2.HTTPプロトコル.md",
             ]
         }
     ]
@@ -481,9 +499,9 @@ function getCodeVersionControl() {
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "Git/1.Git版本控制入门.md",
-                "Git/2.Git常用操作.md",
-                "Git/3.Gitea安装.md"
+                "Git/1.Gitバージョンコントロール入門.md",
+                "Git/2.Git一般的な操作.md",
+                "Git/3.Giteaインストール.md"
             ]
         },
         {
@@ -504,13 +522,13 @@ function getFrame(){
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "Spring框架/Spring介绍.md",
-                "Spring框架/Spring快速入门.md",
-                "Spring框架/加载Spring容器的三种方式.md",
-                "Spring框架/装配Bean（xml方式）.md",
-                "Spring框架/bean的生命周期.md",
-                "Spring框架/Spring事务.md",
-                "Spring框架/常用开发技能.md",
+                "Springフレームワーク/Spring紹介.md",
+                "Springフレームワーク/Springクイックスタート.md",
+                "Springフレームワーク/Springコンテナをロードする3つの方法.md",
+                "Springフレームワーク/Beanのアセンブル（xml方式）.md",
+                "Springフレームワーク/Beanのライフサイクル.md",
+                "Springフレームワーク/Springトランザクション.md",
+                "Springフレームワーク/一般的な開発スキル.md",
             ]
         }
     ]
@@ -519,54 +537,54 @@ function getFrame(){
 function getFrontEnd(){
     return [
         {
-            title: "准备工作",
+            title: "準備作業",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "准备工作/使用nvm管理不同版本的 node与npm.md",
-                "准备工作/使用markdown编写ppt.md",
-                "准备工作/服务端解决跨域调用问题.md",
-                "准备工作/跨域传递cookie.md",
+                "準備作業/使用nvm管理異なるバージョンの nodeとnpm.md",
+                "準備作業/マークダウンを使用してプレゼンテーションを作成.md",
+                "準備作業/サーバー側でクロスドメイン呼び出し問題を解決.md",
+                "準備作業/クロスドメインでcookieを渡す.md",
             ]
         },
         {
-            title: "前后端分离与工程化",
+            title: "フロントエンドとバックエンドの分離とエンジニアリング",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "前后端分离与工程化/前后端分离与工程化.md",
+                "フロントエンドとバックエンドの分離とエンジニアリング/フロントエンドとバックエンドの分離とエンジニアリング.md",
             ]
         },
         {
-            title: "前端性能优化",
+            title: "フロントエンドパフォーマンス最適化",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "前端性能优化/前端性能优化.md",
+                "フロントエンドパフォーマンス最適化/フロントエンドパフォーマンス最適化.md",
             ]
         },
         {
-            title: "基础前端技术",
+            title: "基本フロントエンド技術",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "基础前端技术/基础前端技术.md",
+                "基本フロントエンド技術/基本フロントエンド技術.md",
             ]
         },
         {
-            title: "框架和工具",
+            title: "フレームワークとツール",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "框架和工具/框架和工具.md",
+                "フレームワークとツール/フレームワークとツール.md",
             ]
         },
         {
-            title: "浏览器兼容性与安全性",
+            title: "ブラウザの互換性とセキュリティ",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "浏览器兼容性与安全性/浏览器兼容性与安全性.md",
+                "ブラウザの互換性とセキュリティ/ブラウザの互換性とセキュリティ.md",
             ]
         },
     ]
@@ -575,67 +593,67 @@ function getFrontEnd(){
 function getBackEnd(){
     return [
         {
-            title: "Java开发经验",
+            title: "Java開発経験",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "Java开发经验/Java开发经验.md",
+                "Java開発経験/Java開発経験.md",
             ]
         },
         {
-            title: "NoSQL数据库",
+            title: "NoSQLデータベース",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "NoSQL数据库/NoSQL数据库.md",
+                "NoSQLデータベース/NoSQLデータベース.md",
             ]
         },
         {
-            title: "关系型数据库",
+            title: "リレーショナルデータベース",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "关系型数据库/关系型数据库.md",
+                "リレーショナルデータベース/リレーショナルデータベース.md",
             ]
         },
         {
-            title: "框架和工具链",
+            title: "フレームワークとツールチェーン",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "框架和工具链/框架和工具链.md",
+                "フレームワークとツールチェーン/フレームワークとツールチェーン.md",
             ]
         },
         {
-            title: "RESTful的API",
+            title: "RESTfulのAPI",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "RESTful的API/RESTful的API.md",
+                "RESTfulのAPI/RESTfulのAPI.md",
             ]
         },
         {
-            title: "RESTful的API",
+            title: "RESTfulのAPI",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "RESTful的API/RESTful的API.md",
+                "RESTfulのAPI/RESTfulのAPI.md",
             ]
         },
         {
-            title: "分布式系统及微服务架构",
+            title: "分散システムとマイクロサービスアーキテクチャ",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "分布式系统及微服务架构/分布式系统及微服务架构.md",
+                "分散システムとマイクロサービスアーキテクチャ/分散システムとマイクロサービスアーキテクチャ.md",
             ]
         },
         {
-            title: "消息队列系统",
+            title: "メッセージキューシステム",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "消息队列系统/消息队列系统.md",
+                "メッセージキューシステム/メッセージキューシステム.md",
             ]
         },
     ]
@@ -649,12 +667,12 @@ function getLinux(){
             sidebarDepth: 0,
             children: [
                 "Centos/常用操作/常用操作.md",
-                "Centos/常用软件安装/Maven.md",
-                "Centos/常用软件安装/Zookeeper.md",
-                "Centos/常用软件安装/Apollo.md",
-                "Centos/常用软件安装/Nacos.md",
-                "Centos/常用软件安装/XXL-JOB.md",
-                "Centos/常用软件安装/宝塔面板.md",
+                "Centos/常用ソフトウェアインストール/Maven.md",
+                "Centos/常用ソフトウェアインストール/Zookeeper.md",
+                "Centos/常用ソフトウェアインストール/Apollo.md",
+                "Centos/常用ソフトウェアインストール/Nacos.md",
+                "Centos/常用ソフトウェアインストール/XXL-JOB.md",
+                "Centos/常用ソフトウェアインストール/宝塔パネル.md",
             ]
         },
         {
@@ -663,9 +681,9 @@ function getLinux(){
             sidebarDepth: 0,
             children: [
                 "Ubuntu/常用操作/常用操作.md",
-                "Ubuntu/常用软件安装/docker.md",
-                "Ubuntu/常用软件安装/nvm & node.md",
-                "Ubuntu/常用软件安装/openvpn.md",
+                "Ubuntu/常用ソフトウェアインストール/docker.md",
+                "Ubuntu/常用ソフトウェアインストール/nvm & node.md",
+                "Ubuntu/常用ソフトウェアインストール/openvpn.md",
             ]
         }
     ]
@@ -687,67 +705,67 @@ function getAI(){
 function getForeignLanguages(){
     return [
         {
-            title: "日语新标日初级",
+            title: "日語新標日初级",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "日语/新标日初级/1.第一课.md",
-                "日语/新标日初级/2.第二课.md",
-                "日语/新标日初级/3.第三课.md",
-                "日语/新标日初级/4.第四课.md",
-                "日语/新标日初级/5.第五课.md",
-                "日语/新标日初级/6.第六课.md",
-                "日语/新标日初级/7.第七课.md",
-                "日语/新标日初级/8.第八课.md",
-                "日语/新标日初级/9.第九课.md",
-                "日语/新标日初级/10.第十课.md",
-                "日语/新标日初级/11.第十一课.md",
-                "日语/新标日初级/12.第十二课.md",
-                "日语/新标日初级/13.第十三课.md",
-                "日语/新标日初级/14.第十四课.md",
-                "日语/新标日初级/15.第十五课.md",
-                "日语/新标日初级/16.第十六课.md",
-                "日语/新标日初级/17.第十七课.md",
-                "日语/新标日初级/18.第十八课.md",
-                "日语/新标日初级/19.第十九课.md",
-                "日语/新标日初级/20.第二十课.md",
-                "日语/新标日初级/21.第二十一课.md",
-                "日语/新标日初级/22.第二十二课.md",
-                "日语/新标日初级/23.第二十三课.md",
-                "日语/新标日初级/24.第二十四课.md",
-                "日语/新标日初级/25.第二十五课.md",
-                "日语/新标日初级/26.第二十六课.md",
-                "日语/新标日初级/27.第二十七课.md",
-                "日语/新标日初级/28.第二十八课.md",
-                "日语/新标日初级/29.第二十九课.md",
-                "日语/新标日初级/30.第三十课.md",
-                "日语/新标日初级/31.第三十一课.md",
-                "日语/新标日初级/32.第三十二课.md",
-                "日语/新标日初级/33.第三十三课.md",
-                "日语/新标日初级/34.第三十四课.md",
-                "日语/新标日初级/35.第三十五课.md",
-                "日语/新标日初级/36.第三十六课.md",
-                "日语/新标日初级/37.第三十七课.md",
-                "日语/新标日初级/38.第三十八课.md",
-                "日语/新标日初级/39.第三十九课.md",
-                "日语/新标日初级/40.第四十课.md",
-                "日语/新标日初级/单词汇总.md",
+                "日語/新標日初级/1.第一課.md",
+                "日語/新標日初级/2.第二課.md",
+                "日語/新標日初级/3.第三課.md",
+                "日語/新標日初级/4.第四課.md",
+                "日語/新標日初级/5.第五課.md",
+                "日語/新標日初级/6.第六課.md",
+                "日語/新標日初级/7.第七課.md",
+                "日語/新標日初级/8.第八課.md",
+                "日語/新標日初级/9.第九課.md",
+                "日語/新標日初级/10.第十課.md",
+                "日語/新標日初级/11.第十一課.md",
+                "日語/新標日初级/12.第十二課.md",
+                "日語/新標日初级/13.第十三課.md",
+                "日語/新標日初级/14.第十四課.md",
+                "日語/新標日初级/15.第十五課.md",
+                "日語/新標日初级/16.第十六課.md",
+                "日語/新標日初级/17.第十七課.md",
+                "日語/新標日初级/18.第十八課.md",
+                "日語/新標日初级/19.第十九課.md",
+                "日語/新標日初级/20.第二十課.md",
+                "日語/新標日初级/21.第二十一課.md",
+                "日語/新標日初级/22.第二十二課.md",
+                "日語/新標日初级/23.第二十三課.md",
+                "日語/新標日初级/24.第二十四課.md",
+                "日語/新標日初级/25.第二十五課.md",
+                "日語/新標日初级/26.第二十六課.md",
+                "日語/新標日初级/27.第二十七課.md",
+                "日語/新標日初级/28.第二十八課.md",
+                "日語/新標日初级/29.第二十九課.md",
+                "日語/新標日初级/30.第三十課.md",
+                "日語/新標日初级/31.第三十一課.md",
+                "日語/新標日初级/32.第三十二課.md",
+                "日語/新標日初级/33.第三十三課.md",
+                "日語/新標日初级/34.第三十四課.md",
+                "日語/新標日初级/35.第三十五課.md",
+                "日語/新標日初级/36.第三十六課.md",
+                "日語/新標日初级/37.第三十七課.md",
+                "日語/新標日初级/38.第三十八課.md",
+                "日語/新標日初级/39.第三十九課.md",
+                "日語/新標日初级/40.第四十課.md",
+                "日語/新標日初级/単語まとめ.md",
             ]
         },
         {
-            title: "日语学习语法全掌握",
+            title: "日語学習文法全マスター",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "日语/日语学习语法全掌握/1.名词谓语句.md",
+                "日語/日語学習文法全マスター/1.名詞述語句.md",
             ]
         },
         {
-            title: "TRYN2语法必备",
+            title: "TRYN2文法必須",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "日语/TRYN2语法必备/1.名词+につき.md",
+                "日語/TRYN2文法必須/1.名詞+につき.md",
             ]
         }
     ]
@@ -756,22 +774,22 @@ function getForeignLanguages(){
 function getJobProject(){
     return [
         {
-            title: "上海咪啰信息科技有限公司",
+            title: "上海咪啰情報科技有限公司",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "上海咪啰信息科技有限公司/1.洋⼭四期⼤数据運営効率分析システム.md",
-                "上海咪啰信息科技有限公司/2.三叉戟（Trident）智能集運プラットフォーム.md",
-                "上海咪啰信息科技有限公司/3.⾃動回帰テスト⽀援ツール開発.md",
+                "上海咪啰情報科技有限公司/1.洋⼭四期⼤データ運営効率分析システム.md",
+                "上海咪啰情報科技有限公司/2.三叉戟（Trident）スマートコンテナプラットフォーム.md",
+                "上海咪啰情報科技有限公司/3.自動回帰テスト支援ツール開発.md",
             ]
         },
         {
-            title: "⽹易（杭州）⽹络有限公司",
+            title: "網易（杭州）ネットワーク有限公司",
             collapsable: false,
             sidebarDepth: 0,
             children: [
-                "⽹易（杭州）⽹络有限公司/1.⽹易数帆（クラウド公共プラットフォーム）CMS∕ミニアプリ開発.md",
-                "⽹易（杭州）⽹络有限公司/2.⽹易クラウド 計費‧出帳システム開発.md",
+                "網易（杭州）ネットワーク有限公司/1.網易数帆（クラウド公共プラットフォーム）CMS∕ミニアプリ開発.md",
+                "網易（杭州）ネットワーク有限公司/2.網易クラウド 計費・出帳システム開発.md",
             ]
         }
     ]
