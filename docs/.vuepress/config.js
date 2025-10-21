@@ -294,6 +294,20 @@ module.exports = {
                         ]
                     },
 
+                    {
+                        text: 'プロジェクト紹介',
+                        items: [
+                            {
+                                text: '上海咪啰信息科技有限公司',
+                                link: '/md/プロジェクト紹介/上海咪啰信息科技有限公司/1.洋⼭四期⼤数据運営効率分析システム.md'
+                            },
+                            {
+                                text: '⽹易（杭州）⽹络有限公司',
+                                link: '/md/プロジェクト紹介/⽹易（杭州）⽹络有限公司/1.⽹易数帆（クラウド公共プラットフォーム）CMS∕ミニアプリ開発.md'
+                            },
+                        ]
+                    },
+
                 ],
                 sidebar: {
                     "/md/算法与数据结构/": getAlgorithmDataStructure(),
@@ -311,6 +325,7 @@ module.exports = {
                     "/md/Linux/": getLinux(),
                     "/md/AI/": getAI(),
                     "/md/外语/": getForeignLanguages(),
+                    "/md/プロジェクト紹介/": getJobProject(),
                 }
             }
         }
@@ -738,5 +753,27 @@ function getForeignLanguages(){
     ]
 }
 
-
+function getJobProject(){
+    return [
+        {
+            title: "上海咪啰信息科技有限公司",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "上海咪啰信息科技有限公司/1.洋⼭四期⼤数据運営効率分析システム.md",
+                "上海咪啰信息科技有限公司/2.三叉戟（Trident）智能集運プラットフォーム.md",
+                "上海咪啰信息科技有限公司/3.⾃動回帰テスト⽀援ツール開発.md",
+            ]
+        },
+        {
+            title: "⽹易（杭州）⽹络有限公司",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "⽹易（杭州）⽹络有限公司/1.⽹易数帆（クラウド公共プラットフォーム）CMS∕ミニアプリ開発.md",
+                "⽹易（杭州）⽹络有限公司/2.⽹易クラウド 計費‧出帳システム開発.md",
+            ]
+        }
+    ]
+}
 

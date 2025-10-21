@@ -19,5 +19,5 @@ features:
     <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32058302003243" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="https://bugstack.cn/assets/images/beian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">苏公网安备 32058302003243号</p></a>
     <br/>
     <br/>
-    Copyright © 2024 印爱成，All rights reserved. 学习、积累、实践！
+    Copyright © 2025 印爱成，All rights reserved. 学习、积累、实践！
 </div>

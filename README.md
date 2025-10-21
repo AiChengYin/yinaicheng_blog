@@ -34,13 +34,13 @@ yarn init -y
 "dev" 脚本用于启动开发服务器，实时预览文档；
 
 ```log
-vuepress dev docs 或者yarn dev
+yarn dev或者vuepress dev docs
 ```
 
 "build" 脚本用于构建静态文件，以便部署到服务器或静态托管服务上。 
 
 ```log
-vuepress build docs或者yarn build
+yarn build或者vuepress build docs
 ```
 
 构建完成的源代码压缩后可以上传到服务器并且解压缩，网站资源就能被外部用户访问了。
