@@ -51,7 +51,7 @@ module.exports = {
         ['script',{},`
             (function(){
               if(location.href.indexOf('/yinaicheng_blog/project') > -1){
-                const target = 'https://aichengyin.github.io/yinaicheng_blog/md/プロジェクト紹介/上海咪啰信息科技有限公司/2.三叉戟（Trident）智能集運プラットフォーム.html';
+                const target = 'https://aichengyin.github.io/yinaicheng_blog/md/プロジェクト紹介/上海咪啰信息科技有限公司/1.洋⼭四期⼤数据運営効率分析システム.html';
                 location.href = encodeURI(target);
               }
             })();
