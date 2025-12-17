@@ -379,6 +379,7 @@ function getAlgorithmDataStructure() {
                 "算法/6.选择排序法.md",
                 "算法/7.插入排序法.md",
                 "算法/leetcode_环形链表.md",
+                "算法/leetcode_对称二叉树.md",
             ]
         },
         {
