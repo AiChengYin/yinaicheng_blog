@@ -116,37 +116,6 @@ module.exports = {
                     },
 
                     {
-                        text: '分布式消息中间件',
-                        items: [
-                            {
-                                text: 'ActiveMQ',
-                                link: '/md/分布式消息中间件/ActiveMQ/1.JMS概述.md'
-                            },
-                        ]
-                    },
-
-                    {
-                        text: '负载均衡中间件',
-                        items: [
-                            {
-                                text: 'Nginx',
-                                link: '/md/负载均衡中间件/Nginx/1.Nginx负载均衡.md'
-                            },
-                        ]
-                    },
-
-                    {
-                        text: '分布式文件存储',
-                        items: [
-                            {
-                                text: 'MinIO',
-                                link: '/md/分布式文件存储/MinIO/1.介绍.md'
-                            },
-                        ]
-                    },
-
-
-                    {
                         text: '关系型数据库',
                         items: [
                             {
@@ -177,25 +146,25 @@ module.exports = {
                     },
 
                     {
-                        text: '框架',
+                        text: 'Linux',
                         items: [
                             {
-                                text: 'Spring',
-                                link: '/md/框架/Spring框架/Spring介绍.md'
+                                text: 'Centos',
+                                link: '/md/Linux/Centos/常用操作/常用操作.md'
+                            },
+                            {
+                                text: 'Ubuntu',
+                                link: '/md/Linux/Ubuntu/常用操作/常用操作.md'
                             },
                         ]
                     },
 
                     {
-                        text: '代码版本控制',
+                        text: '框架',
                         items: [
                             {
-                                text: 'Git',
-                                link: '/md/代码版本控制/Git/1.Git版本控制入门.md'
-                            },
-                            {
-                                text: 'JitPack',
-                                link: '/md/代码版本控制/JitPack/JitPack.md'
+                                text: 'Spring',
+                                link: '/md/框架/Spring框架/Spring介绍.md'
                             },
                         ]
                     },
@@ -265,25 +234,55 @@ module.exports = {
                     },
 
                     {
-                        text: '面试',
+                        text: '分布式消息中间件',
                         items: [
                             {
-                                text: '华为',
-                                link: '/md/面试/华为/机考/注意事项.md'
+                                text: 'ActiveMQ',
+                                link: '/md/分布式消息中间件/ActiveMQ/1.JMS概述.md'
                             },
                         ]
                     },
 
                     {
-                        text: 'Linux',
+                        text: '负载均衡中间件',
                         items: [
                             {
-                                text: 'Centos',
-                                link: '/md/Linux/Centos/常用操作/常用操作.md'
+                                text: 'Nginx',
+                                link: '/md/负载均衡中间件/Nginx/1.Nginx负载均衡.md'
+                            },
+                        ]
+                    },
+
+                    {
+                        text: '分布式文件存储',
+                        items: [
+                            {
+                                text: 'MinIO',
+                                link: '/md/分布式文件存储/MinIO/1.介绍.md'
+                            },
+                        ]
+                    },
+
+                    {
+                        text: '代码版本控制',
+                        items: [
+                            {
+                                text: 'Git',
+                                link: '/md/代码版本控制/Git/1.Git版本控制入门.md'
                             },
                             {
-                                text: 'Ubuntu',
-                                link: '/md/Linux/Ubuntu/常用操作/常用操作.md'
+                                text: 'JitPack',
+                                link: '/md/代码版本控制/JitPack/JitPack.md'
+                            },
+                        ]
+                    },
+
+                    {
+                        text: '面试',
+                        items: [
+                            {
+                                text: '华为',
+                                link: '/md/面试/华为/机考/注意事项.md'
                             },
                         ]
                     },
