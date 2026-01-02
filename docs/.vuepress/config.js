@@ -488,7 +488,8 @@ function getMultithreadedConcurrentProgramme() {
             children: [
                 "Java基础/1.Java程序运行原理分析.md",
                 "Java基础/2.线程状态.md",
-                "Java基础/3.线程中止.md"
+                "Java基础/3.线程中止.md",
+                "Java基础/4.内存屏障和CPU缓存.md",
             ]
         }
     ]
