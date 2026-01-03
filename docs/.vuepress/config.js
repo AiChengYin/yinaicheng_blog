@@ -380,6 +380,8 @@ function getAlgorithmDataStructure() {
                 "算法/leetcode_环形链表.md",
                 "算法/leetcode_对称二叉树.md",
                 "算法/leetcode_回文链表.md",
+                "算法/leetcode_汉明距离.md",
+                "算法/leetcode_爬楼梯.md",
             ]
         },
         {
