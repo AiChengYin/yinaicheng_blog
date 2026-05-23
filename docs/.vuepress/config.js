@@ -260,6 +260,10 @@ module.exports = {
                                 text: 'MinIO',
                                 link: '/md/分布式文件存储/MinIO/1.介绍.md'
                             },
+                            {
+                                text: 'SeaweedFS',
+                                link: '/md/分布式文件存储/SeaweedFS/1.Ubuntu部署.md'
+                            },
                         ]
                     },
 
@@ -433,6 +437,14 @@ function getFileStorage(){
             children: [
                 "MinIO/1.介绍.md",
                 "MinIO/2.安装.md",
+            ]
+        },
+        {
+            title: "SeaweedFS",
+            collapsable: false,
+            sidebarDepth: 0,
+            children: [
+                "SeaweedFS/1.Ubuntu部署.md",
             ]
         }
     ]
