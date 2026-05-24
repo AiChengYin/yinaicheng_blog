@@ -716,6 +716,7 @@ function getLinux(){
                 "Ubuntu/常用软件安装/docker.md",
                 "Ubuntu/常用软件安装/nvm & node.md",
                 "Ubuntu/常用软件安装/openvpn.md",
+                "Ubuntu/优化/Ubuntu 24 服务器卡顿问题排查与解决.md",
             ]
         }
     ]
